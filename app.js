@@ -6,7 +6,7 @@ const app = new Application({
 const router = new Router();
 
 const hello = ({ response }) => {
-  response.body = "Hello world";
+  response.body = "Hello world!";
 };
 
 router.get("/", hello);
