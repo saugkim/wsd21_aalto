@@ -12,4 +12,11 @@ const hello = ({ response }) => {
 router.get("/", hello);
 app.use(router.routes());
 
+
+if (Deno.args.length > 0) {
+  const lastArgument = Deno.args[Deno.args.length - 1];
+  app.listen({ port: Number(lastArgument) });
+}
+
+
 export { app };
